@@ -25,12 +25,13 @@ export declare class BlockchainRoutesApi {
 
     getBlocksByHeightWithLimit(height: number, limit: number): Promise<any>;
 
-    getMerkleTree(height: number, hash: string): Promise<any>;
-
     getBlockchainHeight(): Promise<any>;
 
     getBlockchainScore(): Promise<any>;
 
     getDiagnosticStorage(): Promise<any>;
 
+    getMerkleReceipts(height: number, hash: string): Promise<any>;
+
+    getMerkleTransaction(height: number, hash: string): Promise<any>;
 }

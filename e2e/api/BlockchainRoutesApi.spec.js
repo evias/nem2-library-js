@@ -96,14 +96,29 @@ describe('BlockRoutesApi', () => {
 		});
 	});
 
-	describe('getMerkleTree', () => {
-		it('should call getMerkleTree successfully', done => {
-			blockchainRoutesApi.getMerkleTree(
+	describe('getMerkleReceipts', () => {
+		it('should call getMerkleReceipts successfully', done => {
+			blockchainRoutesApi.getMerkleReceipts(
 				250934,
 				'A983745F69959AF438C5B59501B7B6FCD4312DE1F5252A6E8B54D09E23266A7C'
-			).then(tree => {
-				expect(tree).to.have.property('merklePath');
-				expect(tree).to.have.property('rootHash');
+			).then(proof => {
+				expect(proof).to.have.property('payload');
+				expect(proof).to.have.property('type');
+				done();
+			}).catch(error => {
+				console.log(error);
+			});
+		});
+	});
+
+	describe('getMerkleTransaction', () => {
+		it('should call getMerkleTransaction successfully', done => {
+			blockchainRoutesApi.getMerkleTransaction(
+				250934,
+				'A983745F69959AF438C5B59501B7B6FCD4312DE1F5252A6E8B54D09E23266A7C'
+			).then(proof => {
+				expect(proof).to.have.property('payload');
+				expect(proof).to.have.property('type');
 				done();
 			}).catch(error => {
 				console.log(error);
