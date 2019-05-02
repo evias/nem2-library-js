@@ -2375,6 +2375,19 @@
 		};
 	}
 
+/// region: Expose key derivation
+	// Export reduce() function
+	nacl.add = nacl.catapult.add;
+	nacl.crypto_verify_32 = nacl.catapult.crypto_verify_32;
+	nacl.gf = nacl.catapult.gf;
+	nacl.modL = nacl.catapult.modL;
+	nacl.pack = nacl.catapult.pack;
+	nacl.reduce = nacl.catapult.reduce;
+	nacl.scalarbase = nacl.catapult.scalarbase;
+	nacl.scalarmult = nacl.catapult.scalarmult;
+	nacl.unpackneg = nacl.catapult.unpackneg;
+/// end-region: Expose key derivation
+
 	nacl.randomBytes = function (n) {
 		var b = new Uint8Array(n);
 		randombytes(b, n);

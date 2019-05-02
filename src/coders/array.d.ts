@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 NEM
+ * Copyright 2019 NEM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,9 @@
  * limitations under the License.
  */
 
-export declare module nacl_catapult {
-    function randomBytes(numberBytes: number): Uint8Array;
-    function add(p, q): void;
-    function crypto_verify_32(x, xi, y, yi): number;
-    function gf(init?): Float64Array;
-    function modL(r, x): void;
-    function pack(r, p): void;
-    function reduce(r): void;
-    function scalarbase(p, sw): void;
-    function scalarmult(p, q, s): void;
-    function unpackneg(r, p): number;
+export declare module array {
+    function uint8View(input);
+    function isZero(array): boolean;
+    function copy(dest, src, numElementsToCopy, destOffset = 0, srcOffset = 0);
+    function deepEqual(lhs, rhs, numElementsToCompare);
 }

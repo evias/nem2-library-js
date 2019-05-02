@@ -110,6 +110,7 @@ import convert from './coders/convert';
 import IdGenerator from './coders/idGenerator';
 import uint64 from './coders/uint64';
 import address from './coders/address';
+import array from './coders/array';
 import { mosaicId, namespaceId, subnamespaceNamespaceId, subnamespaceParentId } from './transactions/NamespaceMosaicId';
 
 /**
@@ -612,6 +613,11 @@ export {
      * @property {module:coders/address}
      */
         address,
+
+    /**
+     * @property {module:coders/array}
+     */
+        array,
  
     /**
      * @property {module:transactions/mosaicId}
