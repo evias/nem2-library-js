@@ -17,6 +17,6 @@
 export declare module array {
     function uint8View(input);
     function isZero(array): boolean;
-    function copy(dest, src, numElementsToCopy, destOffset = 0, srcOffset = 0);
+    function copy(dest, src, numElementsToCopy);
     function deepEqual(lhs, rhs, numElementsToCompare);
 }
